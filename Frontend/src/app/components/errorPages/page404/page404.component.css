@@ -1,0 +1,12 @@
+i {
+    font-size: 22px;
+    background-color: white;
+    color: green;
+    margin-right: 10px;
+}
+li{
+    list-style-type: none;
+    color: black;
+    font-weight: 500;
+
+}

@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-8 card">
+      <form [formGroup]="userDetailsForm">
+        <div class="heading">Palce your order now</div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="Username">Total Price</label>
+              <input type="text" class="form-control" [value]="bookPrice" />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="Phone Number">Phone Number </label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Phone number"
+                formControlName="phoneNumber"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="country">Country</label>
+              <input
+                type="text"
+                formControlName="country"
+                class="form-control"
+                placeholder="Enter country "
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="State">State</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter state name"
+                formControlName="state"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input
+                type="text"
+                formControlName="city"
+                class="form-control"
+                placeholder="Enter city name"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="Pincode">Pincode</label>
+              <input
+                type="text"
+                formControlName="pincode"
+                class="form-control"
+                placeholder="Enter Pincode"
+              />
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="text-center">
+          <button class="btn btn-success font-weight-bold	 " (click)="submit()">
+            Order now
+          </button>
+        </div>
+
+
+
+
+      </form>
+    </div>
+
+    <div class="col-sm-2"></div>
+  </div>
+</div>

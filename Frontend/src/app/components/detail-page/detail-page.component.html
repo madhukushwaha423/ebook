@@ -1,0 +1,51 @@
+
+<!-- <div *ngIf="bookitem" >
+  <h2>{{ bookitem.bookName | uppercase }} Details </h2>
+  <p>
+    description of the Book :
+    {{bookitem.bookDescription}}<br>
+    Number of pages in this Book are : {{ bookitem.noOfPages}}
+  </p>
+</div> -->
+<div class="container">
+<div class="row" *ngIf="bookitem">
+
+  <div  class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top" [src]="bookPath + bookitem.image" />
+    </div>
+  </div>
+
+  <div class="col-sm-8">
+    <div class="card">
+      <h2>Details</h2>
+      <div class="details">
+        <div class="bookName">
+          {{bookitem.bookName}} <br>
+          &#8377;{{bookitem.bookPrice}} <br>
+          <button class="btn btn-sm rating-button">
+            <!-- <button mat-mini-fab color="primary" aria-label="button"> -->
+            {{ 4.2 }} <i class="fa fa-star" aria-hidden="true"></i>
+          </button>
+        </div>
+      <div class="bookType">
+        Type : For  {{bookitem.bookType}} <br>
+      </div>
+       Author :  {{bookitem.bookAuthor}} <br>
+       Edition : {{bookitem.bookEdition}} <br>
+       Total Pages :  {{bookitem.noOfPages}} <br>
+       Language :  {{bookitem.language}} <br>
+
+       <div class="descrption">
+        Description :  {{bookitem.bookDescription}}
+       </div>
+
+       <div class="bookfooter">
+        <button mat-raised-button [routerLink]="['/orderNow/' + bookitem._id + '/'+ bookitem.bookPrice]" routerLinkActive="router-link-active"   >CheckOut</button>
+       </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>

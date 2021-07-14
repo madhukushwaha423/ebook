@@ -1,0 +1,54 @@
+.header{
+  text-align:center;
+}
+#form{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.form-field{
+  width: 100%;
+  font-size: 16px;
+}
+
+.visibility:focus{
+  outline: none;
+}
+
+#form p{
+  font-size: 12px;
+}
+
+.join-button{
+  width: 100%;
+}
+
+#login img{
+  height: 100%;
+  width: 100%;
+}
+
+#login p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.padding-0{
+  padding-right:0;
+  padding-left:0;
+}
+#box{
+  height: 100%;
+  width: 100%;
+}
+mat-card{
+  border: 1px solid #BFBFBF;
+}
+.signup{
+  transition: 0.5s;
+}

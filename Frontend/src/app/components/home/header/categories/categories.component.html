@@ -1,0 +1,133 @@
+
+<div class="PopularBooks">
+  <div class="items">
+    <div class="container">
+      <p>Popular books</p>
+      <div class="row card-group">
+        <div
+          class="col-md-3"
+          *ngFor="let item of arrayOfPopularBooks | slice:0:4; let i=index"
+        >
+          <div (click)="ShowSelectedBookDetail(item._id)" class="card">
+            <a>
+              <img class="card-img-top" src="../../../assets/book1.jpg" />
+              <div  class="card-footer text-muted">
+              {{item.bookName}} <br>
+               By : {{item.bookAuthor}}
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br /><br />
+  
+  <div class="items">
+    <div class="container">
+      <p>Motivational books</p>
+      <div class="row card-group">
+        <div
+          class="col-md-3"
+          *ngFor="let item of arrayOfMotivationalBooks | slice:0:4; let i=index"
+        >
+          <div (click)="ShowSelectedBookDetail(item._id)" class="card">
+            <a>
+              <img class="card-img-top" src="../../../assets/book1.jpg" />
+              <div  class="card-footer text-muted">
+              {{item.bookName}} <br>
+               By : {{item.bookAuthor}}
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+
+  
+  <div class="items">
+    <div class="container">
+      <p>Exam books</p>
+      <div class="row card-group">
+        <div
+          class="col-md-3"
+          *ngFor="let item of arrayOfExamBooks | slice:0:4; let i=index"
+        >
+          <div (click)="ShowSelectedBookDetail(item._id)" class="card">
+            <a>
+              <img class="card-img-top" src="../../../assets/book1.jpg" />
+              <div  class="card-footer text-muted">
+              {{item.bookName}} <br>
+               By : {{item.bookAuthor}}
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+<div class="card">
+  
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-4">
+        <p><strong>Technical</strong></p>
+        <ul class="list-group" *ngFor="let item of arrayOfTechnicalBooks | slice:0:4; let i=index ">
+          <li class="list-group-item">
+            <div (click)="ShowSelectedBookDetail(item._id)" class="item">
+              <div>
+                {{ item.bookName }} <br />
+                by : {{ item.bookAuthor }}
+              </div>
+              <div>
+                <button class="btn btn-warning">Shop Now</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4">
+        <p><strong>Religious</strong></p>
+        <ul class="list-group" *ngFor="let item of arrayOfReligiousBooks | slice:0:4; let i=index">
+          <li class="list-group-item">
+            <div (click)="ShowSelectedBookDetail(item._id)" class="item">
+              <div>
+                {{ item.bookName }} <br />
+                by : {{ item.bookAuthor }}
+              </div>
+              <div>
+                <button class="btn btn-warning">Shop Now</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4">
+        <p><strong>Nobels </strong></p>
+        <ul class="list-group" *ngFor="let item of arrayOfNobelsBooks | slice:0:4; let i=index">
+          <li class="list-group-item">
+            <div (click)="ShowSelectedBookDetail(item._id)" class="item">
+              <div>
+                {{ item.bookName }} <br />
+                by : {{ item.bookAuthor }}
+              </div>
+              <div>
+                <button class="btn btn-md btn-warning">Shop Now</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>

@@ -1,0 +1,139 @@
+.wrapper {
+  margin-right: 10%;
+  margin-top: 10px;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.ul-head {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+li{
+  border: none;
+  list-style: none;
+  font-size: 14px;
+}
+.p-head{
+  margin-top: 20px;
+  border-bottom: 1px solid blue;
+  margin-right: 70%;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.heading .p-heading {
+  border-bottom: 1px solid blue;
+  margin-right: 80%;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+#BookBox{
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+#BookBox:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#BookBox .card-img-top{
+  width: 200px;
+  height: 200px;
+}
+.rating-button{
+  color: white;
+  background-color: green;
+  font-size: 12px;
+  /* width: 20px; */
+  font-weight: 600;
+  margin-top: 10px;
+}
+.item-rating{
+  background-color: blue;
+}
+.cart-btn{
+  float: right;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+.cart-btn i{
+  text-align: center;
+  font-size: 25px;
+}
+.book-footer{
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: capitalize;
+  margin-top: 10px;
+  /* margin-bottom: 15px; */
+}
+.buttons-footer{
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+  .card {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .heading p{
+    text-align: center;
+    border-bottom: 1px solid blue;
+    color: red;
+  }
+}
+img{
+  height: 200px;
+  width: 100%;
+}
+.pagination{
+    /* position: relative;
+    right: 35%;
+    left: 35%;
+    font-size: 14px;
+    border: 2 px solid black; */
+    display: flex;
+    justify-content: center;
+}
+
+:host /deep/ .ngx-pagination {
+  text-align: center;
+}
+.pagination /deep/ .ngx-pagination .current {
+  background: blue;
+  /* width:50px; */
+}
+
+.pagination /deep/ .ngx-pagination li {
+  border: 1px solid #CCCC;
+  margin-right: 0px;
+}
+
+ .pagination /deep/ .ngx-pagination a::after{
+   display: none;
+ }
+
+ .pagination /deep/ .ngx-pagination li::before{
+   display: none;
+ }
+
+  .pagination /deep/ .ngx-pagination li::after{
+   display: none;
+ }
+
+  .pagination /deep/ .ngx-pagination a::before{
+   display: none;
+ }

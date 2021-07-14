@@ -1,0 +1,46 @@
+nav {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  background-color: blue;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 10%;
+}
+.logo {
+  justify-self: center;
+  /* font-size: 25px; */
+  cursor: pointer;
+}
+
+.form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+  width: 80%;
+  justify-self: center;
+}
+
+.input-group input:focus {
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  background-color: rgb(245, 171, 35);
+}
+
+i {
+  font-size: 22px;
+}
+
+.user {
+  text-align: center;
+  justify-self: start;
+  cursor: pointer;
+}
+
+.header{
+  margin-bottom:5%;
+}
+

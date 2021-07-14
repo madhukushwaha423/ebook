@@ -1,0 +1,107 @@
+ <!-- As a heading -->
+ <nav class="navbar navbar-light">
+   <span class="navbar-brand mb-0 h1">Upload New Book</span>
+   <span class="float-right" >Go Back</span>
+ </nav>
+
+<br>
+<div class="container">
+  <form [formGroup]="uplodadBookForm" (onSubmit)="addBook()" enctype="multipart/form-data">
+    <div class="card">
+
+      <div class="row">
+
+         <div class="col-sm-4">
+            <div class="form-group">
+               <label> Name</label>
+               <input type="text" formControlName="bookName" name="bookName" class="form-control"   placeholder="Ex. Bibliography">
+           </div>
+         </div>
+
+
+         <div class="col-sm-4">
+            <div class="form-group">
+               <label> Type</label>
+               <input type="text" class="form-control" formControlName="bookType"  placeholder="Ex. Exam related">
+             </div>
+         </div>
+         <div class="col-sm-4">
+            <div class="form-group">
+               <label>Author</label>
+               <input type="text" class="form-control" formControlName="bookAuthor"  placeholder="Enter Author Name">
+             </div>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-sm-4">
+            <div class="form-group">
+               <label>Edition</label>
+               <input type="text"  formControlName="bookEdition" class="form-control" id="bookNbookEditoname"  placeholder="Ex. 3rd Edition">
+             </div>
+         </div>
+         <div class="col-sm-4">
+            <div class="form-group">
+               <label> Total Number of  Pages</label>
+               <input formControlName="noOfPages"  type="text" class="form-control"   placeholder="Ex. 235">
+             </div>
+         </div>
+         <div class="col-sm-4">
+            <div class="form-group">
+               <label>Language</label>
+               <input formControlName="language" type="text" class="form-control"  placeholder="Ex. English">
+             </div>
+         </div>
+      </div>
+
+
+
+      <div class="row">
+         <div class="col-sm-4">
+            <div class="form-group">
+               <label>Publisher</label>
+               <input formControlName="publisher" type="text" class="form-control" id="publisher"  placeholder="Ex. R.S. Agarwal">
+             </div>
+         </div>
+         <div class="col-sm-4">
+            <div class="form-group">
+               <label>Price</label>
+               <input formControlName="bookPrice" type="text" class="form-control"   placeholder="Enter Book Price">
+             </div>
+         </div>
+         <div class="col-sm-4">
+            <div class="form-group">
+               <label>For Rent</label>
+               <input formControlName="forRent" type="text" class="form-control"  placeholder="time period for rent">
+             </div>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-sm-4">
+            <div class="form-group">
+               <label>Description</label>
+               <input formControlName="bookDescription" type="text" class="form-control" id="bookName"  placeholder="say something about book">
+             </div>
+         </div>
+
+
+
+         <div class="col-sm-4">
+          <div class="form-group">
+             <label>Image</label>
+             <!-- <input formControlName="image" placeholder="upload an image" type="file" class="form-control" > -->
+             <input type="file" formControlName="image" (change)="onfileSelected($event)" placeholder="upload image" class="form-control">
+           </div>
+       </div>
+      </div>
+
+      <div class="row">
+         <div class="col-sm-12">
+            <button class="btn btn-warning btn-lg" (click)="addBook()">upload</button>
+         </div>
+      </div>
+    </div>
+  </form>
+</div>
+

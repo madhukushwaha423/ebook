@@ -1,0 +1,13 @@
+{
+    "bookType":"",
+    "bookName": "",
+    "bookAuthor": "",
+    "bookEdition": "",
+    "bookPrice":"",
+    "forRent":"",
+    "noOfPages": "",
+    "language": "",
+    "publisher": "",
+    "bookDescription": "",
+    "Image":""
+}

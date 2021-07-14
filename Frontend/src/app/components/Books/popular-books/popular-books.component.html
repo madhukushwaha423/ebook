@@ -1,0 +1,179 @@
+<div class="wrapper">
+  <br />
+  <div class="row">
+    <div class="col-sm-3 card" id="sidebar">
+      <div class="container">
+        <div class="head">
+          <p class="p-head">Sort By</p>
+          <br />
+          <p class="ul-head">Categories</p>
+          <ul>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >Motivational</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >Technical</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >Business</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >Childrens</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >Religious</mat-checkbox
+              >
+            </li>
+          </ul>
+
+          <p class="ul-head">Price</p>
+          <ul>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >&#8377;100 - &#8377;300</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >&#8377;400 - &#8377;800</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >&#8377;900 - &#8377;1200</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >&#8377;1200 - &#8377;2000</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >&#8377;2000 - &#8377;5000</mat-checkbox
+              >
+            </li>
+          </ul>
+
+          <p class="ul-head">Rating</p>
+          <ul>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin">
+                4 <i class="fa fa-star" aria-hidden="true"></i> &
+                avobe</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin">
+                3 <i class="fa fa-star" aria-hidden="true"></i> &
+                avobe</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin">
+                2 <i class="fa fa-star" aria-hidden="true"></i> &
+                avobe</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin">
+                1 <i class="fa fa-star" aria-hidden="true"></i> &
+                avobe</mat-checkbox
+              >
+            </li>
+          </ul>
+          <p class="ul-head">Author</p>
+
+          <ul>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >Kim John</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >Munsi Premchand</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >Gulzar</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >Istaqbal khan</mat-checkbox
+              >
+            </li>
+            <li>
+              <mat-checkbox [color]="color" class="example-margin"
+                >Vyomkesh bakshi</mat-checkbox
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <div class="card">
+        <div class="container">
+          <div class="heading">
+            <br />
+            <p class="p-heading">{{ category }} Book</p>
+            <br />
+          </div>
+          <div class="row card-group">
+            <div
+              class="col-md-3"
+              id="BookBox"
+              *ngFor="
+                let item of arrayOfBooks
+                  | paginate: { itemsPerPage: 12, currentPage: p }
+              "
+            >
+              <div [routerLink]="['/bookdetail/' + item._id]">
+                <a>
+                  <img class="card-img-top" [src]="bookPath + item.image" />
+                  <div class="book-footer">
+                    {{ item.bookName }} <br />
+                    &#8377;{{ item.bookPrice }} <br />
+                    <div class="buttons-footer">
+                      <button class="btn btn-sm rating-button">
+                        {{ 4.2 }} <i class="fa fa-star" aria-hidden="true"></i>
+                      </button>
+                      <button mat-mini-fab class="cart-btn">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-6">
+      <div class="pagination">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
+
+    <div class="col-sm-3"></div>
+  </div>
+</div>

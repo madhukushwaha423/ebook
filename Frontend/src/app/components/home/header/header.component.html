@@ -1,0 +1,21 @@
+<!-- navbar -->
+<div class="header">
+  <nav class="navbar-expand-lg fixed-top navbar-light">
+    <div class="logo" [routerLink]="['']" routerLinkActive="router-link-active" >E-Book</div>
+
+    <div class="form">
+      <div class="input-group">
+        <input type="text" aria-label="Last name" class="form-control" />
+        <div class="input-group-prepend">
+          <span><button class="btn btn-warning">Serach</button></span>
+        </div>
+      </div>
+    </div>
+    <div  *ngIf="loggenInOrNot" class="user" (click)="logout()" >
+      <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;logout
+    </div>
+    <div *ngIf="!loggenInOrNot"  routerLink='/signin' class="user">
+      <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;SignIn
+    </div>
+  </nav>
+</div>
